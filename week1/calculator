@@ -1,1 +1,37 @@
+import java.util.Scanner;
+public class Calculator{
+    public static void main(String[] args){
+    	int choice;
+    	float num1,num2;
+    	Scanner input = new Scanner(System.in);
+    	System.out.print("Enter the value of num1 : ");
+    	num1 = input.nextFloat();
+    	System.out.print("Enter the value of num2: ");
+    	num2 = input.nextFloat();
+    	System.out.print("The operations are: \n1.Addition, 2.Subtraction, 3.Multiplication,                  	4.Division\n");
+    	System.out.print("Enter your Choice: ");
+    	choice = input.nextInt();
+    	if(choice == 1)
+    	{
+        	System.out.print("The Addition of "+ num1 +" and "+ num2+" is "+(num1+num2));
+    	}
+    	else if(choice == 2)
+    	{
+        	System.out.print("The Subtraction of "+ num1 +" and "+ num2+" is "+(num1-num2));  
+    	}
+    	else if(choice == 3)
+    	{
+         	System.out.print("The Multiplication of "+ num1 +" and "+ num2 +" is "+(num1*num2));
+    	}
+    	else if(choice == 4)
+    	{
+         	System.out.print("The Division of "+ num1+" and "+ num2+" is "+(num1/num2));
+    	}
+    	else
+   	{
+         	System.out.print(“Enter the valid choice.\n”);
+   	}
+    	
+    }
+}
 
