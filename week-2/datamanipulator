@@ -1,0 +1,32 @@
+//write a c++ program for data manipulators like endl,ends,setw,setfill,flush,ws,setprecision
+#include<iostream>
+#include<string>
+#include<iomanip>
+using namespace std;
+int main()
+{
+    string name;
+    double num;
+    //using endl
+    cout<<" this is bhagya"<<endl;
+     cout<<"Enter string name:"<<endl;
+    //using ws
+    getline(cin>>ws,name);
+    cout<<name<<endl;
+     //using flush
+    cout.flush();
+    cout<<name<<endl;
+    //using setw
+    cout<<setw(45)<<name<<endl;
+    //using ends
+    cout<<"Hello"<<ends<<name<<endl;
+    cout<<setw(20);
+    //using setfill
+    cout<<setfill('A');
+    cout<<name<<endl;
+    cout<<"enter floating point number:"<<endl;
+    cin>>num;
+    //using setprecision
+    cout<<setprecision(10);
+    cout<<num<<endl;
+}
