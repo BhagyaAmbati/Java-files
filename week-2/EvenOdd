@@ -1,0 +1,21 @@
+ #include<iostream>
+#include<string>
+using namespace std;
+void EvenOdd(int num){
+    if(num%2==0)
+    {
+        cout<<"the value "<<" "<<num<<" is even number"<<endl;
+    }
+    else
+    {
+        cout<<"the value "<<" "<<num<<" is odd number"<<endl;
+    }
+}
+int main(){
+    int num;
+    cout<<"Enter the value:"<<endl;
+    cin>>num;
+    EvenOdd(num);
+
+}
+
