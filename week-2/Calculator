@@ -1,0 +1,33 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+    int choice;
+    float a,b;
+    cout<<"Enter the value :";
+    cin>>a;
+    cout<<"Enter the value:";
+    cin>>b;
+    cout<<"Enter the choice number:";
+    cin>>choice;
+    switch (choice)
+    {
+    case 1:
+            cout<<"the Addition of "<<a<<" and "<<b<<" is "<<(a+b)<<endl;
+            break;
+    case 2:
+            cout<<"the Subtraction of "<<a<<" and "<<b<<" is "<<(a-b)<<endl;
+            break;
+    case 3:
+            cout<<"the Multiplication of "<<a<<" and "<<b<<" is "<<(a*b)<<endl;
+            break;
+    case 4:
+
+            cout<<"the Division of "<<a<<" and "<<b<<" is "<<(a/b)<<endl;
+            break;
+    default:
+            cout<<"Enter the valid number"<<endl;
+        break;
+    }
+}
