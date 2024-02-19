@@ -21,6 +21,10 @@ class Student{
             collegeCode = code;
         }
         friend void displayPrivate(Student);
+        
+   ~Student(){
+        cout<<"I'm dead"<<endl;
+    }
 };
 
 void displayPrivate(Student s){
