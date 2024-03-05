@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class ClassA
+{
+public:
+void displayA()
+{
+cout<<"A constructor is called"<<endl;
+}
+};
+class ClassB: public ClassA
+{
+public:
+void displayB()
+{
+cout<<"B constructor is called"<<endl;
+}
+};
+class ClassC: public ClassA
+{
+public:
+void displayC()
+{
+cout<<"C constructor is called"<<endl;
+}
+};
+class ClassD: public ClassC,public ClassB
+{
+public:
+void displayD()
+{
+cout<<"D constructor is called"<<endl;
+}
+};
+int main()
+{
+ClassD obj1;
+obj1.displayB();
+obj1.displayC();
+obj1.displayD();
+return 0;
+}
