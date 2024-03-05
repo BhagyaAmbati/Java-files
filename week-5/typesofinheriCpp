@@ -1,0 +1,109 @@
+#include<iostream>
+using namespace std;
+class ClassA
+{
+public:
+void displayA()
+{
+cout<<"A constructor is called"<<endl;
+}
+};
+class ClassB
+{
+public:
+void displayB()
+{
+cout<<"B constructor is called"<<endl;
+}
+};
+//Multiple Inheritance
+class ClassC: public ClassA,public ClassB
+{
+public:
+void displayC()
+{
+cout<<"C constructor is called"<<endl;
+}
+};
+//Simple Inheritance
+class ClassD: public ClassA
+{
+public:
+void displayD()
+{
+cout<<"D constructor is called"<<endl;
+}
+};
+//Hybrid Inheritance
+class ClassE: public ClassC,public ClassD
+{
+public:
+void displayE()
+{
+cout<<"E constructor is called"<<endl;
+}
+};
+//Multi-Level Inheritance
+class ClassF: public ClassD
+{
+public:
+void displayF()
+{
+cout<<"F constructor is called"<<endl;
+}
+};
+//Hierarchical Inheritance
+class ClassG:public ClassA
+{
+public:
+void displayG()
+{
+cout<<"G constructor is called"<<endl;
+}
+};
+class ClassH:public ClassA
+{
+public:
+void displayH()
+{
+cout<<"H constructor is called"<<endl;
+}
+};
+int main()
+{
+//Simple Inheritance
+cout<<"Simple Inheritance\n";
+ClassD obj1;
+obj1.displayA();
+obj1.displayD();
+//Multiple Inheritance
+cout<<"Multiple Inheritance\n";
+ClassC obj2;
+obj2.displayA();
+obj2.displayB();
+obj2.displayC();
+//Multi-Level Inheritance
+cout<<"Multi-Level Inheritance\n";
+ClassF obj3;
+obj3.displayA();
+obj3.displayD();
+obj3.displayF();
+//Hierarchical Inheritance
+cout<<"Hierarchical Inheritance\n";
+ClassG obj4;
+ClassH obj5;
+obj4.displayA();
+obj4.displayG();
+obj5.displayA();
+obj5.displayH();
+//Hybrid Inheritance
+cout<<"Hybrid Inheritance\n";
+ClassE obj6;
+//obj6.aClass();
+//aClass() method becomes ambiguous here
+obj6.displayB();
+obj6.displayC();
+obj6.displayD();
+obj6.displayE();
+return 0;
+}
