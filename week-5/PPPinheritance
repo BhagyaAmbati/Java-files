@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+class parent{
+    public:
+    int a=10;
+    private:
+    int b=20;
+    protected:
+    int c=30;
+    public:
+    void display(){
+        cout<<"public variable: "<<a<<endl;
+        cout<<"private variable: "<<b<<endl;
+        cout<<"protected variable: "<<c<<endl;
+    }
+    //changing private variable
+    int getb(){
+        return b;
+    }
+};
+//public inheritance
+class child: public parent{
+    public:
+    int privatevar=getb();
+    int protectedvar=c;
+};
+//private inheritance
+class child1: parent{
+    public:
+    int publicvar=a,privatevar=getb(),protectedvar=c;
+    
+};
+//protected inheritance
+class child2: protected parent{
+    public:
+    int publicvar=a,privatevar=getb(),protectedvar=c;
+};
+//main function
+int main(){
+    parent obj;
+    child obj0;
+    cout<<"public simple inheritance"<<endl;
+    cout<<"public variable : "<<obj0.a<<endl;
+    cout<<"private variable : "<<obj0.privatevar<<endl;
+    cout<<"protected variable : "<<obj0.protectedvar<<endl<<endl;
+
+    child1 obj1;
+    cout<<"private simple inheritance"<<endl;
+    cout<<"public variable : "<<obj1.publicvar<<endl;
+    cout<<"private variable : "<<obj1.privatevar<<endl;
+    cout<<"protected variable : "<<obj1.protectedvar<<endl<<endl;
+
+    child2 obj2;
+    cout<<"protected simple inheritance"<<endl;
+    cout<<"public variable : "<<obj2.publicvar<<endl;
+    cout<<"private variable : "<<obj2.privatevar<<endl;
+    cout<<"protected variable : "<<obj2.protectedvar<<endl<<endl;
+}
