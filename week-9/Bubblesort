@@ -1,0 +1,33 @@
+class BubbleSort<T extends Comparable <T>>{
+    void bubbleSort(T[] data){
+        for(int i=0;i<data.length;i++){
+            for(int j=1;j<data.length;j++){
+                if(data[j-1].compareTo(data[j])<0){
+                    T temp=data[j-1];
+                    data[j-1]=data[j];
+                    data[j]=temp;
+                }
+            }
+
+        }
+        System.out.println("Array elements are:");
+        for(int i=0;i<data.length;i++){
+            System.out.println(data[i]);
+        }
+
+    }
+    public static void main(String[] args){
+        BubbleSort<Integer> obj=new BubbleSort<>();
+       Integer arr[]={12,3,7,98};
+        obj.bubbleSort(arr);
+        BubbleSort<String> obj1=new BubbleSort<>();
+         String arr1[]={"Bhagya","Laxmi"};
+        obj1.bubbleSort(arr1);
+ BubbleSort<Double> obj2=new BubbleSort<>();
+       Double arr2[]={12.2,43.7,2.34,87.4};
+        obj2.bubbleSort(arr2);
+
+
+    }
+}
+
